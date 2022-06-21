@@ -36,7 +36,7 @@ nav #logo-container ul li {
 }
 
 nav #logo-container ul li:hover {
-  border-bottom: 2px solid;
+  border-bottom: 2px solid #ff7d1a;
 }
 
 nav #summary {
