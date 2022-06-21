@@ -1,0 +1,152 @@
+main{
+    display:grid;
+    margin: 80px 0;
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Kumbh Sans;
+}
+#section1{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #current-item-div{
+        height: 250px;
+        width: 250px;
+        
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+    }
+    #items{
+        width: 250px;
+        margin: 10px 0;
+        display:flex;
+        justify-content: space-between;
+        img{
+            width:50px;
+            border-radius:5px;
+
+            &:hover{
+                opacity: 0.5;
+                border: hsl(26, 100%, 55%) solid 2px;
+            }
+        }
+    }
+}
+
+#section2{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    #company-name{
+        text-transform: uppercase;
+        font-size: 10px;
+        color: hsl(26, 100%, 55%);
+    }
+    #edition{
+        font-size: 36px;
+        margin: 10px 0;
+    }
+    >p{
+        font-size: 12px;
+        margin: 10px 0;
+        opacity: 0.5;
+    }
+
+    #price{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 120px;
+        font-weight: 900;
+        letter-spacing: 1px;
+
+        h2{
+            font-size: 16px;
+        }
+        h4{ 
+            padding: 2px 10px;
+            color:hsl(26, 100%, 55%);
+            background: hsl(25, 100%, 94%);
+            border-radius: 5px;
+            margin-left: 20px;
+
+        }
+    }
+
+    #final-price{
+        opacity: 0.3;
+        text-decoration:line-through;
+        font-weight: 900;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+    }
+
+    #order{
+        display:flex;
+        
+        #cart-order{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items:center;
+            justify-content: space-evenly;
+            width: 150px;
+            margin-right: 10px;
+            background: hsl(223, 64%, 98%);
+            box-shadow: 1px 1px 2px rgb(105, 93, 93);
+            border-radius: 5px;
+            height: 40px;
+
+    
+            h4{
+                text-align: center;
+                display:flex;
+                justify-content: center;
+                align-self: center;
+                width:20px;
+                font-size: 20px;
+                margin: 0 auto;
+            
+            }
+            &>div{
+                display:flex;
+                justify-content: center;
+                
+                img{
+                    display:block;
+                    cursor:pointer;
+                }
+            }
+        }
+    
+        #add-to-cart{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            background: hsl(26, 100%, 55%);
+            border-radius: 5px;
+            color: #fff;
+            font-size: 12px;
+            img{
+                display:block;
+                margin-right: 10px;
+            }
+            
+        }
+    }
+
+}

@@ -1,0 +1,118 @@
+nav{
+    display:flex;
+    justify-content: space-between;
+    width: 900px;
+    margin: 20px auto;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(7, 7, 7, 0.226);
+    position: relative;
+
+   #logo-container{
+        display:flex;
+        align-items:center;
+        #logo{
+            height:16px;
+
+        }
+        ul{
+            display:flex;
+            margin-left: 20px;
+            position: relative;
+            top: 14px;
+            margin-bottom: -6px;
+            li{
+                text-decoration: none;
+                list-style-type: none;
+                margin: 0 5px;
+                padding-bottom: 25px;
+                min-width: 50px;
+                text-align: center;
+                &:hover{
+                    border-bottom: 2px solid;
+                }
+            }
+        }
+   }
+
+   #summary{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        min-width: 20vw;
+        justify-self: right;
+
+        #user{
+            height:30px;
+            padding: 0px;
+            border: 1px solid hsl(26, 100%, 55%);
+            border-radius:50%;
+            margin-left: 50px;
+        }
+        #cart{
+            height:14px;
+        }
+   }
+   #checkout-box{
+    display:flex;
+    position: absolute;
+    display:none;
+    height: 150px;
+    width: 250px;
+    z-index:10;
+    background: #fff;
+    border-radius: 5px;
+    top:0;
+    right: 50px;
+    top: 50px;
+    box-shadow: 1px 1px 5px rgb(105, 93, 93);
+    #checkout{
+        visibility:hidden;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute; 
+        height: 150px;
+        width: 250px;
+        padding: 20px;
+        &>h2{
+            font-size: 12px;
+        }
+        img{
+            height: 35px;
+            border-radius: 4px;
+        }
+        hr{
+            margin:0 auto;
+            margin-left: -20px;
+            opacity: 0.5;
+            width: 120%;
+        }
+        #flex{
+            display: flex;
+            justify-content: space-between;
+            p{
+                font-size: 11px;
+            }
+            #delete{
+                height: 16px;
+            }
+      
+        }
+        button{
+            background:hsl(26, 100%, 55%);
+            color:white;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            font-size: 10px;
+        }
+       }
+       #checkout-nothing{
+        position: absolute;
+        @extend #checkout;
+        p{
+            text-align: center;
+        }
+       }
+   }
+}
