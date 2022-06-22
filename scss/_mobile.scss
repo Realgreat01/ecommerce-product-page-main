@@ -1,0 +1,113 @@
+#menu{
+    display:none;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#nav-mobile{
+    height: 100vh;
+    width: 200px;
+    position: absolute;
+    top:0;
+    background:#fff;
+    border: 1px solid #eef;
+    color:black;
+    display: flex;
+    align-items: start;
+    z-index:11;
+    flex-direction: column;
+    display:none;
+    transition: 2s all;
+    img{
+        position: relative;
+        top: 50px;
+        margin: 0px 20px;
+    }
+    ul{
+        position: relative;
+        top: 100px;
+        li{
+            margin: 20px 20px;
+            font-weight: 700;
+            list-style-type: none;
+
+        }
+    }
+}
+
+#blur{
+    height: 100vh;
+    width:100vw;
+    background: rgba(0, 0, 0, 0.37);
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    display:none;
+}
+
+@media only screen and (max-width: 500px){
+    nav{
+        #checkout-box{
+            top:70px;
+            right: 20%;
+        }
+        #nav-desktop li{
+            display:none;
+        }
+        #menu{
+            display:block;
+        }
+    }
+    body{
+        background: #fff;
+    }
+    main{
+        display:flex;
+        flex-direction: column;
+        margin: 0px;
+        max-width: 800px;
+        margin: 0 auto;
+        padding:0;
+        #section1{
+            margin-top:-20px;
+            #current-item-div{
+                height: 250px;
+                width: 100vw;
+                #btn{
+                    display: flex;
+                }
+                img{
+                    border-radius: 0px;
+                }
+            }
+        #items{
+            display: none;
+        }
+        
+        }
+        #section2{
+            margin: 20px auto;
+            width: 80vw;
+            #edition{
+                font-size: 24px;
+            }
+            #order{
+                display:flex;
+                flex-direction: column;
+                
+                #cart-order{
+                    width: 80vw;
+                    margin:10px auto;
+                }
+            
+                #add-to-cart{
+                    width: 200px;
+                    height: 40px;
+                    width: 80vw;
+                }
+            }
+        }
+
+    }
+    
+}

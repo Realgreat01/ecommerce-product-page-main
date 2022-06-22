@@ -16,10 +16,23 @@
   </style>
 </head>
 <body>
+  <aside id="nav-mobile">
+    <img src="./images/icon-close.svg" alt="" id="close">
+    <ul>
+      <li>Collections</li>
+      <li>Men</li>
+      <li>Women</li>
+      <li>About</li>
+      <li>Contact</li>
+  </ul>
+  </aside>
+  <div id="blur">
+  </div>
   <nav>
     <div id="logo-container">
+      <img src="./images/icon-menu.svg" alt="menu" id="menu">
       <img src="./images/logo.svg" alt="logo" id="logo">
-      <ul>
+      <ul id="nav-desktop">
         <li>Collections</li>
         <li>Men</li>
         <li>Women</li>
@@ -28,7 +41,10 @@
     </ul>
     </div>
     <div id="summary">
-      <img src="./images/icon-cart.svg" alt="cart" id="cart">
+      <div id="cart-box">
+        <p id="amount">10</p>
+        <img src="./images/icon-cart.svg" alt="cart" id="cart">
+      </div>
       <img src="./images/image-avatar.png" alt="user" id="user">
     </div>
       <div id="checkout-box">
@@ -57,6 +73,10 @@
     <section id="section1">
       <div id="current-item-div">
         <img src="./images/image-product-1.jpg" alt="current-item-image" id="current-item">
+        <div id="btn">
+          <img src="./images/icon-previous.svg" alt="" id="prev">
+          <img src="./images/icon-next.svg" alt="" id="next">
+        </div>
       </div>
       <div id="items">
         <img src="./images/image-product-1.jpg" alt="item1" id="item1"  class="item-image" onclick="clicked(this)">
@@ -97,9 +117,10 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="www.twitter.com/Srealgreat">Samson Realgreat</a>.
   </div>
 
   <script src="app.js"></script>
+  <script src="mobile.js"></script>
 </body>
 </html>

@@ -2,10 +2,10 @@
 nav {
   display: flex;
   justify-content: space-between;
-  width: 900px;
+  max-width: 900px;
   margin: 20px auto;
   padding-bottom: 20px;
-  border-bottom: 2px solid rgba(7, 7, 7, 0.226);
+  border-bottom: 2px solid rgba(7, 7, 7, 0.089);
   position: relative;
 }
 
@@ -43,8 +43,9 @@ nav #summary {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 20vw;
+  max-width: 50px;
   justify-self: right;
+  margin-right: 30px;
 }
 
 nav #summary #user {
@@ -52,10 +53,34 @@ nav #summary #user {
   padding: 0px;
   border: 1px solid #ff7d1a;
   border-radius: 50%;
-  margin-left: 50px;
+  margin-left: 30px;
+  cursor: pointer;
 }
 
-nav #summary #cart {
+nav #summary #cart-box {
+  position: relative;
+  cursor: pointer;
+}
+
+nav #summary #cart-box p {
+  position: absolute;
+  color: #fff;
+  height: 14px;
+  width: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  top: -6px;
+  right: -7px;
+  background: #ff7d1a;
+  font-size: 8px;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+nav #summary #cart-box #cart {
   height: 14px;
 }
 
@@ -152,11 +177,33 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 }
 
 #section1 #current-item-div {
   height: 250px;
   width: 250px;
+  position: relative;
+}
+
+#section1 #current-item-div #btn {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  width: 100%;
+  display: none;
+  z-index: 0;
+}
+
+#section1 #current-item-div #btn img {
+  width: 20px;
+  height: 22.5px;
+  background: #fff;
+  padding: 7px;
+  margin: 0 20px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 #section1 #current-item-div img {
@@ -280,9 +327,119 @@ main {
   border-radius: 5px;
   color: #fff;
   font-size: 12px;
+  cursor: pointer;
 }
 
 #section2 #order #add-to-cart img {
   display: block;
   margin-right: 10px;
+}
+
+#menu {
+  display: none;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#nav-mobile {
+  height: 100vh;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  background: #fff;
+  border: 1px solid #eef;
+  color: black;
+  display: flex;
+  align-items: start;
+  z-index: 11;
+  flex-direction: column;
+  display: none;
+  transition: 2s all;
+}
+
+#nav-mobile img {
+  position: relative;
+  top: 50px;
+  margin: 0px 20px;
+}
+
+#nav-mobile ul {
+  position: relative;
+  top: 100px;
+}
+
+#nav-mobile ul li {
+  margin: 20px 20px;
+  font-weight: 700;
+  list-style-type: none;
+}
+
+#blur {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.37);
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  nav #checkout-box {
+    top: 70px;
+    right: 20%;
+  }
+  nav #nav-desktop li {
+    display: none;
+  }
+  nav #menu {
+    display: block;
+  }
+  body {
+    background: #fff;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  main #section1 {
+    margin-top: -20px;
+  }
+  main #section1 #current-item-div {
+    height: 250px;
+    width: 100vw;
+  }
+  main #section1 #current-item-div #btn {
+    display: flex;
+  }
+  main #section1 #current-item-div img {
+    border-radius: 0px;
+  }
+  main #section1 #items {
+    display: none;
+  }
+  main #section2 {
+    margin: 20px auto;
+    width: 80vw;
+  }
+  main #section2 #edition {
+    font-size: 24px;
+  }
+  main #section2 #order {
+    display: flex;
+    flex-direction: column;
+  }
+  main #section2 #order #cart-order {
+    width: 80vw;
+    margin: 10px auto;
+  }
+  main #section2 #order #add-to-cart {
+    width: 200px;
+    height: 40px;
+    width: 80vw;
+  }
 }
