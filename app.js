@@ -66,15 +66,15 @@ const addToCart= document.getElementById("add-to-cart");
     if(quantity==0){    
     emptyCart.style.visibility="visible"
     }
-    checkOutBox.style.display="block"
+    if(checkOutBox.style.display=="block"){
+      checkOutBox.style.display="none";
+    }else{
+      checkOutBox.style.display="block";
+    }
 }
-const hideCart=()=>{
-    checkOutBox.style.display="none"
-}
+
 user.addEventListener("click", showCart)
-user.addEventListener("dblclick", hideCart)
 cart.addEventListener("click", showCart)
-cart.addEventListener("dblclick", hideCart)
 addToCart.addEventListener("click", ()=>{
   if(quantity>0){
     
